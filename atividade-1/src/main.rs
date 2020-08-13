@@ -20,35 +20,35 @@ fn main () {
     println!("Calculando o volume de uma caixa retangular.");
 
     println!("Digite o valor de comprimento da caixa.");
-    let mut comprimento = String::new();
+    let mut comprimento : String = String::new();
     io::stdin()
         .read_line(&mut comprimento)
         .expect("Falha ao ler o valor");
 
     
-    let comprimento2 : i32 = converter_string_para_i32(comprimento);
+    let comprimento : i32 = converter_string_para_i32(comprimento);
 
 
     println!("Digite o valor de largura da caixa.");
-    let mut largura = String::new();
+    let mut largura : String = String::new();
     io::stdin()
         .read_line(&mut largura)
         .expect("Falha ao ler o valor");
 
-    let largura2 : i32 = converter_string_para_i32(largura);
+    let largura : i32 = converter_string_para_i32(largura);
 
 
     println!("Digite o valor de altura da caixa.");
-    let mut altura = String::new();
+    let mut altura : String = String::new();
     io::stdin()
         .read_line(&mut altura)
         .expect("Falha ao ler o valor");
     
-    let altura2 : i32 = converter_string_para_i32(altura);
+    let altura : i32 = converter_string_para_i32(altura);
 
 
-    let volume = comprimento2 * largura2 * altura2;
-    println!("O volume da caixa é: {} ." ,volume);
+    let volume = comprimento * largura * altura;
+    println!("O volume da caixa é: {} m³." ,volume);
 
 
     fn converter_string_para_i32(uma_string: String) -> i32 {
