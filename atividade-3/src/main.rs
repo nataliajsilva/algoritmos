@@ -1,6 +1,6 @@
 /*Elaborar um programa que leia dois valores números reais representados pelas variáveis A e B. Calcular, armazenar e apresentar os resultados das quatro operações aritméticas básicas entre eles.*/
 
-////Pseudocódigo:
+//Pseudocódigo:
 //Pedir ao usuário o valor do número A
 //Pedor ao usuário o valor do número B
 //Realizar o cálculo das quatro operações aritméticas básicas (/ , * , + ,  - ) utilizando os valores do das variáveis A e B, e armazenar os resultados
