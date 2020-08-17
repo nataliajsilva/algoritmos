@@ -10,6 +10,7 @@
 //Exibir as notas e informar ao usuário a situação do aluno
 
 use std::io;
+use  std :: ops :: Div ;
 
 fn main() {
     
@@ -28,7 +29,7 @@ fn main() {
        .read_line(&mut p1)
        .expect("Falha ao ler o valor");
 
-    let p1 : i32 = converter_string_para_i32(p1);
+    let p1 : f32 = converter_string_para_f32(p1);
 
 
     println!("Digite sua nota da P2");
@@ -37,7 +38,7 @@ fn main() {
         .read_line(&mut p2)
         .expect("Falha ao ler o valor");
     
-    let p2 : i32 = converter_string_para_i32(p2);
+    let p2 : f32 = converter_string_para_f32(p2);
 
 
     println!("Digite sua nota da P3");
@@ -46,16 +47,17 @@ fn main() {
        .read_line(&mut p3)
        .expect("Falha ao ler o valor");
     
-    let p3 : i32 = converter_string_para_i32(p3);
+    let p3 : f32 = converter_string_para_f32(p3);
+
+    type Output = <f32 as Div<f32>>::Output;
+    
+    let media : f32 = (p1 + p2 + p3)/3;
 
     
-    let media = (p1 + p2 + p3)/3;
-
-    
-    if media > 7 {
+    if media > 7.0 {
         print!("{}, com base nas notas das provas P1: {}, P2: {} e P3: {}, a situação do aluno é: APROVADO ",nome, p1, p2, p3);
 
-    } else if media >= 5 && media <=7 {
+    } else if media >= 5.0 && media <=7.0 {
         print!("{}, com base nas notas das provas P1: {}, P2: {} e P3: {}, a situação do aluno é: EM RECUPERAÇÃO ",nome, p1, p2, p3);
 
     } else {
@@ -63,7 +65,7 @@ fn main() {
     }
 
 
-    fn converter_string_para_i32(uma_string: String) -> i32 {
+    fn converter_string_para_f32(uma_string: String) -> f32 {
         uma_string
             .trim()
             .parse()
