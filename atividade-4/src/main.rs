@@ -18,7 +18,7 @@ io::stdin()
         .read_line(&mut base)
         .expect("Falha ao ler o valor");
 
-let base : i32 = converter_string_para_i32(base);
+let base : f32 = converter_string_para_f32(base);
 
 
 
@@ -28,11 +28,11 @@ io::stdin()
         .read_line(&mut expoente)
         .expect("Falha ao ler o valor");
 
-let expoente : u32 = converter_string_para_u32(expoente);
+let expoente : i32 = converter_string_para_i32(expoente);
 
 
 
-let pontenciacao = base.pow(expoente);
+let pontenciacao : f32 = base.powi(expoente);
 
 
 println!("O resultado da potênciação {}^{} é : {}", base, expoente, pontenciacao);
@@ -45,11 +45,12 @@ fn converter_string_para_i32(uma_string: String) -> i32 {
         .expect("Falha ao converter o valor")
 }
 
-fn converter_string_para_u32(uma_string: String) -> u32 {
-    uma_string
-        .trim()
-        .parse()
-        .expect("Falha ao converter o valor")
-}
+
+fn converter_string_para_f32(uma_string: String) -> f32 {
+        uma_string
+            .trim()
+            .parse()
+            .expect("Falha ao converter o valor")
+    }
     
 }

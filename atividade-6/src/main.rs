@@ -61,7 +61,6 @@ fn main() {
     }
 
 
-
     fn converter_string_para_i32(uma_string: String) -> i32 {
         uma_string
             .trim()
