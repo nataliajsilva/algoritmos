@@ -10,7 +10,6 @@
 //Exibir as notas e informar ao usuário a situação do aluno
 
 use std::io;
-use  std :: ops :: Div ;
 
 fn main() {
     
@@ -49,9 +48,8 @@ fn main() {
     
     let p3 : f32 = converter_string_para_f32(p3);
 
-    type Output = <f32 as Div<f32>>::Output;
     
-    let media : f32 = (p1 + p2 + p3)/3;
+    let media : f32 = (p1 + p2 + p3)/3f32;
 
     
     if media > 7.0 {
