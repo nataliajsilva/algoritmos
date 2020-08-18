@@ -3,7 +3,7 @@
 //Pseudocódigo:
 //Pedir ao uusário um número inteiro que esteja entre 1 e 9
 //Verificar se o número informado esta entre 1 e 9
-//Caso esteja exibir a msg que o valor esta entre a faixa permitida, caso contrário informar que esta fora da faixa
+//Caso esteja, exibir a msg que o valor esta entre a faixa permitida, caso contrário, informar que esta fora da faixa
 
 use std :: io;
 
