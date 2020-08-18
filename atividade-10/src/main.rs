@@ -2,7 +2,7 @@
 
 //Pseudocódigo
 //Pedir ao usuário um número
-//Verificar se o número informado é impar ou par
+//Verificar se o número informado é ímpar ou par
 //Exibir o resultado
 
 use std :: io;
@@ -18,12 +18,12 @@ fn main() {
        .expect("Falha ao ler o valor");
 
     let numero : i32 = converter_string_para_i32(numero);
-    
+
 
     if numero % 2 == 0 {
         println!("O número {} é par" , numero);
     } else {
-        println!("O número {} é impar" , numero);
+        println!("O número {} é ímpar" , numero);
     }
 
 

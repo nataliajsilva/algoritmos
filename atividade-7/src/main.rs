@@ -55,13 +55,13 @@ fn main() {
 
     
     if media > 7.0 {
-        print!("{}, com base nas notas das provas P1: {}, P2: {} e P3: {}, a situação do aluno é: APROVADO ",nome, p1, p2, p3);
+        print!("{}, com base nas notas das provas P1: {}, P2: {} e P3: {}, a média é {}. Sendo assim, a situação do aluno é: APROVADO ",nome, p1, p2, p3, media);
 
     } else if media >= 5.0 && media <=7.0 {
-        print!("{}, com base nas notas das provas P1: {}, P2: {} e P3: {}, a situação do aluno é: EM RECUPERAÇÃO ",nome, p1, p2, p3);
+        print!("{}, com base nas notas das provas P1: {}, P2: {} e P3: {}, a média é {}. Sendo assim, a situação do aluno é: EM RECUPERAÇÃO ",nome, p1, p2, p3, media);
 
     } else {
-        print!("{}, com base nas notas das provas P1: {}, P2: {} e P3: {}, a situação do aluno é: REPROVADO ",nome, p1, p2, p3);
+        print!("{}, com base nas notas das provas P1: {}, P2: {} e P3: {}, a média é {}. Sendo assim, a situação do aluno é: REPROVADO ",nome, p1, p2, p3, media);
     }
 
 
