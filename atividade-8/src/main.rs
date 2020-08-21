@@ -9,14 +9,12 @@ Sendo o primeiro número da série 0, o segundo 1, e os subsequentes a soma dos 
 
 fn main() {
 
-    let quantidade_numeros : i32 = 13;
+    /*let quantidade_numeros : i32 = 13;
     let mut contador : i32 = 0;
     let mut numero_anterior : i32 = -1;
     let mut numero_atual : i32 = 1;
     let mut proximo_numero : i32 ;
 
-
-    println!("Sequência de Fibonacci:");
 
     while contador < quantidade_numeros{
 
@@ -27,9 +25,32 @@ fn main() {
         println!("{}", proximo_numero);
         contador = contador + 1;
 
-    }
+    }*/
+
+    println!("Sequência de Fibonacci:");
+
+    Fibonacci(0);
 
     
-    
+
+}
+
+fn Fibonacci(contador : i32) -> i32 {
+  
+    let mut numero_anterior : i32 = -1;
+    let mut numero_atual : i32 = 1;
+    let mut proximo_numero : i32 ;
+
+    if contador > 13 {
+       return contador;
+  } else {
+    proximo_numero = numero_anterior + numero_atual;
+    numero_anterior = numero_atual;
+    numero_atual = proximo_numero;
+
+    return println!("{}", proximo_numero);
+    Fibonacci(contador + 1);
+
+  }
 
 }
