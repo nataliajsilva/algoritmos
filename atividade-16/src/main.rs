@@ -5,9 +5,17 @@ Restrição: Utilize o laço condicional pós-teste. */
 fn main() {
     println!("Números divisivéis por 4 e menores que 200");
 
-    for numero in 0..200 {
-        if numero % 4 == 0 {
-            println!("{}", numero);
+    let mut count = 0;
+
+    loop {
+        count += 1;
+
+        if count % 4 == 0 {
+            println!("{}", count);
+        }
+
+        if count >= 200 {
+            break;
         }
     }
 }

@@ -10,73 +10,21 @@ Restrição: Utilize o laço condicional pré-teste. */
 use std::io;
 
 fn main() {
-
     println!("Tabuada de 0 até 10");
 
     println!("Digite um número de 0 a 10, que deseje ver a tabuada");
-    let mut numero : String = String::new();
+    let mut numero: String = String::new();
     io::stdin()
-       .read_line(&mut numero)
-       .expect("Falha ao ler o valor");
+        .read_line(&mut numero)
+        .expect("Falha ao ler o valor");
 
-    let numero : i32 = converter_string_para_i32(numero);
-    let mut contador : i32 = 0;
+    let numero: i32 = converter_string_para_i32(numero);
+    let mut contador: i32 = 0;
 
-    while numero == 0 && contador <= 10 {
-        println!(" {} x {} = {}" , numero, contador, numero * contador);
+    while contador <= 10 {
+        println!(" {} x {} = {}", numero, contador, numero * contador);
         contador = contador + 1;
-        }
-        
-    while numero == 1 && contador <= 10 {
-        println!(" {} x {} = {}" , numero, contador, numero * contador);
-        contador = contador + 1;
-        }
-
-    while numero == 2 && contador <= 10 {
-        println!(" {} x {} = {}" , numero, contador, numero * contador);
-        contador = contador + 1;
-        }
-
-    while numero == 3 && contador <= 10 {
-        println!(" {} x {} = {}" , numero, contador, numero * contador);
-        contador = contador + 1;
-        }
-
-    while numero == 4 && contador <= 10 {
-    println!(" {} x {} = {}" , numero, contador, numero * contador);
-    contador = contador + 1;
     }
-
-    while numero == 5 && contador <= 10 {
-        println!(" {} x {} = {}" , numero, contador, numero * contador);
-        contador = contador + 1;
-        }
-    
-    while numero == 6 && contador <= 10 {
-        println!(" {} x {} = {}" , numero, contador, numero * contador);
-        contador = contador + 1;
-        }
-    
-    while numero == 7 && contador <= 10 {
-        println!(" {} x {} = {}" , numero, contador, numero * contador);
-        contador = contador + 1;
-        }
-
-    while numero == 8 && contador <= 10 {
-        println!(" {} x {} = {}" , numero, contador, numero * contador);
-        contador = contador + 1;
-        }
-    
-    while numero == 9 && contador <= 10 {
-        println!(" {} x {} = {}" , numero, contador, numero * contador);
-        contador = contador + 1;
-        }
-
-    while numero == 10 && contador <= 10 {
-        println!(" {} x {} = {}" , numero, contador, numero * contador);
-        contador = contador + 1;
-        }
-
     fn converter_string_para_i32(uma_string: String) -> i32 {
         uma_string
             .trim()

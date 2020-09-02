@@ -7,21 +7,16 @@ fn main() {
 
     let base: i32 = 3;
     let mut contador: i32 = 0;
-    let mut potencia: i32 = 0;
+    let mut potencia: i32;
 
     while contador <= 15 {
-        if contador == 0 {
-            potencia = 1;
-        }
-        if contador == 1 {
-            potencia = base;
-        }
         potencia = base * contador;
-        contador = contador + 1;
 
         println!(
             "O resultado da potência do valor de base {}, elevado ao expoente {}: {}",
             base, contador, potencia
         );
+
+        contador = contador + 1;
     }
 }
