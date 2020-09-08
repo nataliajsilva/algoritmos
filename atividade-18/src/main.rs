@@ -5,37 +5,43 @@ use std::io;
 fn main() {
     println!("Somatório da fatorial de todos os números lidos");
 
-    println!("Quantos números inteiros deverão ser lidos?");
-    let mut qtd_numero: String = String::new();
-    io::stdin()
-        .read_line(&mut qtd_numero)
-        .expect("Falha ao ler o valor");
+    let mut numeros: [i32; 3] = [0; 3];
+    let mut numeros_indice: usize = 0;
 
-    let qtd_numero: i32 = converter_string_para_i32(qtd_numero);
-    let mut numeros = vec![];
-    let mut contador: i32 = 1;
-
-    while contador <= qtd_numero {
-        println!("Digite o valor do número");
+    while numeros_indice <= 2 {
+        println!("Digite um número");
         let mut numero: String = String::new();
         io::stdin()
             .read_line(&mut numero)
             .expect("Falha ao ler o valor");
         let numero: i32 = converter_string_para_i32(numero);
 
-        numeros.push(numero);
-        contador = contador + 1;
+        numeros[numeros_indice] = numero;
+        numeros_indice = numeros_indice + 1;
     }
 
-    //println!("{}", numeros[0]);
+    let mut resultado_fatorial: i32 = 1;
+    let mut soma_fatorial: i32 = 0;
 
+    //pegar o número na lista
     for i in numeros.iter() {
-        let mut fatorial: usize;
-        fatorial = fatorial * (numeros & [i] - 1, 0usize);
-        numeros & [i] - 1 as usize;
 
-        println!("{}", fatorial);
+        let mut contador: i32 = 1;
+
+       // fazer o fatorial do número e armazenar o resultado
+        while contador <= *i {
+
+            resultado_fatorial = resultado_fatorial * contador;
+            contador = contador + 1;
+
+        //println!("{}", resultado_fatorial);
+        }
+        // somar os resultados das fatoriais
+        soma_fatorial += resultado_fatorial;   
+        resultado_fatorial = 1;
     }
+
+    println!("O somatório das fatorias dos números é {} ", soma_fatorial);
 
     fn converter_string_para_i32(uma_string: String) -> i32 {
         uma_string
