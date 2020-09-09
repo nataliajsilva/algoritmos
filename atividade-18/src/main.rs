@@ -28,7 +28,6 @@ fn main() {
 
         let mut contador: i32 = 1;
 
-       // fazer o fatorial do número e armazenar o resultado
         while contador <= *i {
 
             resultado_fatorial = resultado_fatorial * contador;
@@ -36,7 +35,7 @@ fn main() {
 
         //println!("{}", resultado_fatorial);
         }
-        // somar os resultados das fatoriais
+        
         soma_fatorial += resultado_fatorial;   
         resultado_fatorial = 1;
     }
