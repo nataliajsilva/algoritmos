@@ -23,7 +23,7 @@ fn main() {
     let mut resultado_fatorial: i32 = 1;
     let mut soma_fatorial: i32 = 0;
 
-    //pegar o número na lista
+
     for i in numeros.iter() {
 
         let mut contador: i32 = 1;
