@@ -29,9 +29,7 @@ fn main() {
     for i in a.iter(){
          
         if i < &menor_temperatura {
-
             menor_temperatura = *i;
-
         } 
     }
     
@@ -39,9 +37,7 @@ fn main() {
     for i in a.iter(){
          
         if i > &maior_temperatura {
-
             maior_temperatura = *i;
-
         } 
     }
 
@@ -51,7 +47,6 @@ fn main() {
     for i in a.iter(){
          
         total = total + i;
-
         } 
 
     let media_temperaturas :f32 = total / 10.0 ;
@@ -59,7 +54,6 @@ fn main() {
     //exibir a menor, a maior e a média
     println!("A menor temperatura lida foi {}° , a maior temperatura lida foi {}° e a media das temperaturas é {}°", 
     menor_temperatura, maior_temperatura, media_temperaturas);
-
 
     fn converter_string_para_f32(uma_string: String) -> f32 {
         uma_string
