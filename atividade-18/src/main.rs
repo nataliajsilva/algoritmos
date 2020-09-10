@@ -20,13 +20,12 @@ fn main() {
         numeros_indice = numeros_indice + 1;
     }
 
-    let mut resultado_fatorial: i32 = 1;
     let mut soma_fatorial: i32 = 0;
-
 
     for i in numeros.iter() {
 
         let mut contador: i32 = 1;
+        let mut resultado_fatorial: i32 = 1;
 
         while contador <= *i {
 
@@ -35,9 +34,7 @@ fn main() {
 
         //println!("{}", resultado_fatorial);
         }
-        
         soma_fatorial += resultado_fatorial;   
-        resultado_fatorial = 1;
     }
 
     println!("O somatório das fatorias dos números é {} ", soma_fatorial);

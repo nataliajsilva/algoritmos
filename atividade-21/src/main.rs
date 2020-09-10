@@ -22,23 +22,19 @@ fn main() {
     }
 
     let mut b: [i32; 5] = [0; 5];
-    let mut resultado_fatorial: i32 = 1;
 
-    for i in a.iter() {
-
+    for (i,item) in a.iter().enumerate() {
+       
         let mut contador: i32 = 1;
+        let mut resultado_fatorial :i32 = 1;
 
-        while contador <= *i {
-
-            resultado_fatorial = resultado_fatorial * contador;
-            contador = contador + 1;
-
-            b[contador]= resultado_fatorial;
-
-        println!("{}", resultado_fatorial);
+        while contador <= *item  {
+            resultado_fatorial *= contador;
+            contador += 1;
         }
+        //println!("{}", resultado_fatorial);
+        b[i] = resultado_fatorial;
 
-        resultado_fatorial = 1;
     } 
 
     println!("A={:?}", a);
