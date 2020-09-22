@@ -1,4 +1,4 @@
-/*Elaborar um programa que pergunte quantos números inteiros deverão ser lidos, lê-los, e no final apresente o somatório da fatorial de todos os valores lidos. */
+/*Elaborar um programa que leia 3 valores inteiros, armazene-os em um vetor, e percorra o vetor calculando o fatorial de cada valor lido. No final, deverá apresentar o somatórios dos valores calculados.. */
 
 use std::io;
 

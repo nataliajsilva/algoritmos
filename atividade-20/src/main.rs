@@ -6,7 +6,7 @@ fn main() {
     
     println!("Exibindo novo vetor a partir da subtração de dois outros vetores");
 
-    let mut a: [i32; 5] = [0; 5];
+    let mut a: [f32; 5] = [0.0; 5];
     let mut numeros_indice_a: usize = 0;
 
     while numeros_indice_a <= 4 {
@@ -15,13 +15,13 @@ fn main() {
         io::stdin()
             .read_line(&mut numeros_a)
             .expect("Falha ao ler o valor");
-        let numeros_a: i32 = converter_string_para_i32(numeros_a);
+        let numeros_a: f32 = converter_string_para_f32(numeros_a);
     
         a[numeros_indice_a] = numeros_a;
         numeros_indice_a = numeros_indice_a + 1;
     }
 
-    let mut b: [i32; 5] = [0; 5];
+    let mut b: [f32; 5] = [0.0; 5];
     let mut numeros_indice_b: usize = 0;
 
     while numeros_indice_b <= 4 {
@@ -30,7 +30,7 @@ fn main() {
         io::stdin()
             .read_line(&mut numeros_b)
             .expect("Falha ao ler o valor");
-        let numeros_b: i32 = converter_string_para_i32(numeros_b);
+        let numeros_b: f32 = converter_string_para_f32(numeros_b);
     
         b[numeros_indice_b] = numeros_b;
         numeros_indice_b = numeros_indice_b + 1;
@@ -40,7 +40,7 @@ fn main() {
     println!("B={:?}", b);
 
 
-    let mut c: [i32; 5] = [0; 5];
+    let mut c: [f32; 5] = [0.0; 5];
 
     let mut contador: usize = 0;
 
@@ -53,7 +53,7 @@ fn main() {
 
     println!("C={:?}", c);
     
-    fn converter_string_para_i32(uma_string: String) -> i32 {
+    fn converter_string_para_f32(uma_string: String) -> f32 {
        uma_string
           .trim()
           .parse()

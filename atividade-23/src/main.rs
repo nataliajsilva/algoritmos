@@ -24,28 +24,28 @@ fn main() {
 
     let mut menor_numero :i32 = a[0];
     let mut vetor_inverso :[i32; 10] = [0; 10];
-    let mut contador_reverso: usize = 9;
+    
+    let mut contador : usize = 9;
+    let mut contador_inverso : usize = 0;
 
-    for (i,_item) in a.iter().enumerate() {
+    while contador >=  0 {
 
-        while contador_reverso >= 0  {
-            
-            vetor_inverso[contador_reverso] = a[i];
-            contador_reverso -= 1;
+        vetor_inverso[contador_inverso] = a[contador];
+        
+        if contador > 0 {
+            contador -= 1; 
+            contador_inverso += 1;
+
+            if a[contador] < menor_numero {
+                menor_numero = a[contador];
+            } 
+        } else {
+            break;
         }
     }
     
-    
-    //calcular menor
-    for i in vetor_inverso.iter(){
-         
-        if i < &menor_numero {
-            menor_numero = *i;
-        } 
-    }
-
     println!("A={:?}", a);
-    println!("vetor_inverso={:?}", vetor_inverso);
+    println!("Vetor inverso={:?}", vetor_inverso);
     println!("O menor número lido no vetor foi {}", menor_numero);
         
     fn converter_string_para_i32(uma_string: String) -> i32 {
