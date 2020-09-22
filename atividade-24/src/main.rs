@@ -39,7 +39,7 @@ fn main() {
             .expect("Falha ao ler o valor");
         let numeros: i32 = converter_string_para_i32(numeros);
 
-        if ! numeros % 5 == 0 {
+        if  numeros % 5 != 0 {
 
            b[numeros_indice_b] = numeros;
            numeros_indice_b = numeros_indice_b + 1;
@@ -49,24 +49,26 @@ fn main() {
         }
     }
 
-    println!("{:?},",a);
-    println!("{:?},",b);
+    println!("A= {:?},",a);
+    println!("B= {:?},",b);
 
     let mut c: [i32; 10] = [0; 10];
-    let mut contador: usize = 1;
+    
+    let mut contador: usize = 0;
+    let mut contador_b : usize = 0;
 
-    for (i,item) in a.iter().enumerate() {
-       
-        while contador <= *item  {
-        
-            c[contador] = a[i];
+    while contador <= 9 {
 
-            contador += 1;
+        if contador <= 4 {
+            c[contador] = a[contador];
+        } else {
+            c[contador] = b[contador_b];
+            contador_b += 1;
         }
-        
-    } 
+       contador += 1;
+    }
 
-
+    println!("C= {:?},",c);
 
     fn converter_string_para_i32(uma_string: String) -> i32 {
         uma_string
