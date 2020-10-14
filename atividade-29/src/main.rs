@@ -26,15 +26,13 @@ fn main() {
     let colunas = 5;
     let linhas = 5;
     let mut somatorio = 0.0;
-    let mut indice_diagonal = 0;
 
     for x in 0..colunas {
         for y in 0..linhas {
-            if x == indice_diagonal && y == indice_diagonal {
+            if x == y {
                 somatorio = somatorio + a[x][y];
             }
         }
-        indice_diagonal += 1;
     }
 
     println!("A={:?}", a);

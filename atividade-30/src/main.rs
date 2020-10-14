@@ -30,7 +30,7 @@ fn main() {
     for x in 0..colunas {
         for y in 0..linhas {
             if x % 2 == 1 && y % 2 == 1 && x == y {
-                println!("{} {}", x, y); //x == 1 && y == 1 || x == 3 && y == 3
+                println!("{} {}", x, y);
                 somatorio = somatorio + a[x][y];
             }
         }

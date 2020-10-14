@@ -27,17 +27,16 @@ fn main() {
 
     let colunas = 5;
     let linhas = 5;
-    let mut indice_diagonal = 0;
+    //let mut indice_diagonal = 0;
 
     for x in 0..colunas {
         for y in 0..linhas {
-            if x == indice_diagonal && y == indice_diagonal {
+            if x == y {
                 b[x][y] = a[x][y] * 3;
             } else {
                 b[x][y] = a[x][y] * 2;
             }
         }
-        indice_diagonal += 1;
     }
 
     println!("A={:?}", a);
