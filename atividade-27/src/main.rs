@@ -44,8 +44,8 @@ fn main() {
         while contador <= 4 {
             c[contador_linhas][coluna_um] = a[contador] * 2.0;
             c[contador_linhas][coluna_dois] = b[contador] - 5.0;
-            contador = contador + 1;
-            contador_linhas = contador_linhas + 1;
+            contador += 1;
+            contador_linhas += 1;
         }
     }
 

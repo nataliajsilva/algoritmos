@@ -39,7 +39,7 @@ fn main() {
     }
 
     let percentual_pares = total_pares * 100 / (5 * 5);
-    let percentual_impares = total_impares * 100 / (5 * 5);
+    let percentual_impares = 100 - percentual_pares;
 
     println!("A={:?}", a);
     println!(
